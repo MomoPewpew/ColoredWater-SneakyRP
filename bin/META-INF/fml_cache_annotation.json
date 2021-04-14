@@ -1,0 +1,102 @@
+{
+  "net/pl3x/colored_water/ColoredWater": {
+    "name": "net/pl3x/colored_water/ColoredWater",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "net/pl3x/colored_water/ColoredWater",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "modid": {
+            "value": "colored_water"
+          },
+          "name": {
+            "value": "ColorfulWater"
+          },
+          "updateJSON": {
+            "value": "http://pl3x.net/versions/colored_water.json"
+          },
+          "version": {
+            "value": "1.12.2-b37"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "net.pl3x.colored_water.proxy.ClientProxy"
+          },
+          "serverSide": {
+            "value": "net.pl3x.colored_water.proxy.ServerProxy"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      }
+    ]
+  },
+  "net/pl3x/colored_water/particle/ParticleBubble$Factory": {
+    "name": "net/pl3x/colored_water/particle/ParticleBubble$Factory",
+    "interfaces": [
+      "net/minecraft/client/particle/IParticleFactory"
+    ]
+  },
+  "net/pl3x/colored_water/particle/ParticleRain$Factory": {
+    "name": "net/pl3x/colored_water/particle/ParticleRain$Factory",
+    "interfaces": [
+      "net/minecraft/client/particle/IParticleFactory"
+    ]
+  },
+  "net/pl3x/colored_water/particle/ParticleSplash$Factory": {
+    "name": "net/pl3x/colored_water/particle/ParticleSplash$Factory",
+    "interfaces": [
+      "net/minecraft/client/particle/IParticleFactory"
+    ]
+  },
+  "net/pl3x/colored_water/particle/ParticleWaterWake$Factory": {
+    "name": "net/pl3x/colored_water/particle/ParticleWaterWake$Factory",
+    "interfaces": [
+      "net/minecraft/client/particle/IParticleFactory"
+    ]
+  },
+  "net/pl3x/colored_water/proxy/ClientProxy": {
+    "name": "net/pl3x/colored_water/proxy/ClientProxy",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "on(Lnet/minecraftforge/client/event/RenderBlockOverlayEvent;)V"
+      }
+    ]
+  },
+  "net/pl3x/colored_water/proxy/ServerProxy": {
+    "name": "net/pl3x/colored_water/proxy/ServerProxy",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onCreateFluidSource(Lnet/minecraftforge/event/world/BlockEvent$CreateFluidSourceEvent;)V"
+      }
+    ]
+  },
+  "net/pl3x/colored_water/recipe/RecipeFactory": {
+    "name": "net/pl3x/colored_water/recipe/RecipeFactory",
+    "interfaces": [
+      "net/minecraftforge/common/crafting/IRecipeFactory"
+    ]
+  }
+}
